@@ -1,10 +1,12 @@
 <script setup>
+import TheHeader from '@/components/TheHeader.vue';
+
 
 </script>
 
 <template>
-  <div>
-    <!--  component TheHeader-->
+  <div class="page">
+    <TheHeader />
 
     <!--  component SearchField-->
 
@@ -13,5 +15,12 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
+.page {
+  background: var(--background-body);
+  margin-inline: auto;
+  max-inline-size: 375px;
+  padding: 31px 24px 80px 24px;
+}
+
 </style>

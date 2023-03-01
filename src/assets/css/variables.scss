@@ -1,8 +1,61 @@
 :root {
-	--light-primary: hsl(212deg 100% 50%);
+	--color-mode: 'light';
 
+	--button-bg: hsl(212deg 100% 50%);
+	--button-bg-active: hsl(212deg 100% 69%);
+	--button-color: hsl(0 0% 100%);
+
+	--toggle-button-hover: hsl(220deg 18% 16%);
+
+	--link-color: hsl(217deg 35% 45%);
+
+	--text-color-dark: hsl(217deg 21% 21%);
+	--text-color-light: hsl(217deg 35% 45%);
+	--text-color-accent: hsl(212deg 100% 50%);
+	--text-color-unavailable: hsl(217deg 20% 51%);
+
+	--background-body: hsl(226 100% 98%);
+	--background-dark: hsl(227deg 100% 98%);
+	--background-light: hsl(0 0% 100%);
 }
 
-h1 {
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-mode: 'dark';
+	}
 
+	:root:not([data-user-color-scheme]) {
+		--button-bg: hsl(212deg 100% 50%);
+		--button-bg-active: hsl(212deg 100% 69%);
+		--button-color: hsl(0 0% 100%);
+
+		--toggle-button-hover: hsl(222deg 44% 70%);
+
+		--link-color: hsl(0 0% 100%);
+
+		--text-color-dark: hsl(0 0% 100%);
+		--text-color-light: hsl(0 0% 100%);
+		--text-color-accent: hsl(212deg 100% 50%);
+
+		--background-body: hsl(220deg 40% 13%);
+		--background-dark: hsl(0 0% 100%);
+		--background-light: hsl(222deg 41% 20%);
+	}
+}
+
+[data-user-color-scheme='dark'] {
+	--button-bg: hsl(212deg 100% 50%);
+	--button-bg-active: hsl(212deg 100% 69%);
+	--button-color: hsl(0 0% 100%);
+
+	--toggle-button-hover: hsl(222deg 44% 70%);
+
+	--link-color: hsl(0 0% 100%);
+
+	--text-color-dark: hsl(0 0% 100%);
+	--text-color-light: hsl(0 0% 100%);
+
+	--background-body: hsl(220deg 40% 13%);
+	--background-dark: hsl(0 0% 100%);
+	--background-light: hsl(222deg 41% 20%);
 }
